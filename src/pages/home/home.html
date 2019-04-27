@@ -1,0 +1,61 @@
+<ion-header>
+   <ion-navbar>
+      <ion-title>
+        Informations
+      </ion-title> 
+   </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-content class="home-content" padding>
+  <ion-row class="logo-row">
+
+    <ion-col>
+      <img src="http://www.ac-strasbourg.fr/fileadmin/site_www_v2/public/assets/img/logo_standard.svg"/>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+
+   <div class="home-box">
+      <div *ngIf=" xmlItems != 0">
+         <ion-item-group>
+            <ion-item-divider color="light">Numéro INE</ion-item-divider>
+            <ion-item *ngFor="let item of xmlItems">
+               {{ item.ine }}
+            </ion-item>
+         </ion-item-group>
+
+         <ion-item-group>
+            <ion-item-divider color="light">Nom</ion-item-divider>
+            <ion-item *ngFor="let item of xmlItems">
+               {{ item.nom }}
+            </ion-item>
+         </ion-item-group>
+
+         <ion-item-group>
+            <ion-item-divider color="light">Prénom</ion-item-divider>
+            <ion-item *ngFor="let item of xmlItems">
+               {{ item.prenom }}
+            </ion-item>
+         </ion-item-group>
+
+         <ion-item-group>
+            <ion-item-divider color="light">Date de naissance</ion-item-divider>
+            <ion-item *ngFor="let item of xmlItems">
+               {{ item.date }}
+            </ion-item>
+         </ion-item-group>
+
+         <ion-item-group>
+            <ion-item-divider color="light">Numéro de téléphone</ion-item-divider>
+            <ion-item *ngFor="let item of xmlItems">
+               {{ item.tel }}
+            </ion-item>
+         </ion-item-group>
+      </div>
+      <div class="alert" *ngIf=" xmlItems == 0" >
+         <strong>Pas de compte avec ce login et mot de passe !
+          Veuillez réessayer.</strong>
+      </div>
+   </div> 
+</ion-content>

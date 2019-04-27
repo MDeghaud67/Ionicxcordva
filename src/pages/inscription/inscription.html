@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inscription</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="inscription-content" padding>
+  <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col>
+      <img src="http://www.ac-strasbourg.fr/fileadmin/site_www_v2/public/assets/img/logo_standard.svg"/>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+
+  <div class="inscription-box">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+
+          <ion-item>
+            <ion-input type="text" placeholder="Numéro INE" name="ine" [(ngModel)]="ine"  required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="text" placeholder="Nom" name="nom" [(ngModel)]="nom"  required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="text" placeholder="Prénom" name="prenom" [(ngModel)]="prenom"  required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="date" placeholder="Date de naissance" name="date_naiss" [(ngModel)]="date_naiss"  required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="tel" placeholder="Numéro de téléphone" name="tel" [(ngModel)]="tel"  required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="text" placeholder="Login" name="login" [(ngModel)]="login"  required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input type="password" placeholder="Mot de passe" name="password" [(ngModel)]="password"  required></ion-input>
+          </ion-item>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>      
+    <ion-row>
+      <ion-col class="signup-col">
+        <button ion-button class="submit-btn" full (click)="valider()">Valider</button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<div class="footer-box">
+  <ion-footer>
+    <p> Phase de développement par AE. </p>
+  </ion-footer>
+</div>
